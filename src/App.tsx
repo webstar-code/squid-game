@@ -19,7 +19,7 @@ import LoadingScreen from "./LoadingScreen";
 import Modal from "./Modal";
 import OverlayPage from "./overlaypage"; // Use lowercase if that's how the file is named
 import { Toaster } from "react-hot-toast";
-
+import BACKGROUND_MENU from './images/background-menu.png'
 import { Buffer as BufferPolyfill } from 'buffer';
 
 if (typeof window !== 'undefined' && typeof window.Buffer === 'undefined') {
@@ -400,6 +400,11 @@ const App: React.FC = () => {
 
     preloadPages();
   }, [userID]); // Ensure userID is a dependency
+  const [loadingIframe, setLoadingIframe] = useState(true);
+
+  const handleIframeLoad = () => {
+    setLoadingIframe(false);
+  };
 
   return (
     <div className="relative flex justify-center">
@@ -411,14 +416,21 @@ const App: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"></div>
           {/* <div className="absolute inset-0 bg-gradient-to-tl from-[#e54b81] via-[#e262b5] to-[#e54b81] opacity-30"></div> */}
 
-          <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col max-w-xl">
+          <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col items-center max-w-xl">
             {/* Conditional Rendering of Pages */}
-            <iframe
-              src="/game.html"
-              title="Squid Game"
-              className="bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"
-              style={{ width: '100%', height: activePage === "home" ? "100%": 0, border: 'none', marginTop: -60, opacity: activePage === "home" ? 100 : 0 }}
-            />
+            <div className="relative w-full h-full  flex flex-col items-center">
+              {loadingIframe &&
+                <img src={BACKGROUND_MENU} className="absolute -mt-16 top-0 left-0 w-full h-full object-contain" />
+              }
+              <iframe
+                loading="lazy"
+                src="/game.html"
+                title="Squid Game"
+                onLoad={handleIframeLoad}
+                className="bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"
+                style={{ width: 400, height: activePage === "home" ? "100%" : 0, border: 'none', marginTop: -60, opacity: activePage === "home" ? 100 : 0 }}
+              />
+            </div>
 
             {activePage === "home" && (
               <></>
