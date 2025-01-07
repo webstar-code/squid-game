@@ -416,7 +416,7 @@ const App: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"></div>
           {/* <div className="absolute inset-0 bg-gradient-to-tl from-[#e54b81] via-[#e262b5] to-[#e54b81] opacity-30"></div> */}
 
-          <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col items-center max-w-xl">
+          <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col max-w-xl">
             {/* Conditional Rendering of Pages */}
             <div className="relative w-full h-full  flex flex-col items-center">
               {loadingIframe &&
