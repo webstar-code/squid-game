@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useUser } from "./UserContext";
 
 import "./App.css";
@@ -21,7 +21,6 @@ import OverlayPage from "./overlaypage"; // Use lowercase if that's how the file
 import { Toaster } from "react-hot-toast";
 
 import { Buffer as BufferPolyfill } from 'buffer';
-import { Game } from "./Game";
 
 if (typeof window !== 'undefined' && typeof window.Buffer === 'undefined') {
   window.Buffer = BufferPolyfill;
@@ -31,6 +30,17 @@ if (typeof window !== 'undefined' && typeof window.Buffer === 'undefined') {
 declare const Telegram: any;
 
 const App: React.FC = () => {
+
+  const iframeContent = useMemo(() => (
+    <iframe
+      src="/game.html"
+      title="Squid Game"
+      className="bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"
+      style={{ width: '100%', height: '100%', border: 'none', marginTop: -60 }}
+    />
+  ), []);
+
+
   const levelNames = [
     "Bronze",
     "Silver",
@@ -269,9 +279,8 @@ const App: React.FC = () => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
-      card.style.transform = `perspective(1000px) rotateX(${
-        -y / 10
-      }deg) rotateY(${x / 10}deg)`;
+      card.style.transform = `perspective(1000px) rotateX(${-y / 10
+        }deg) rotateY(${x / 10}deg)`;
       setTimeout(() => {
         card.style.transform = "";
       }, 100);
@@ -416,7 +425,7 @@ const App: React.FC = () => {
           <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col max-w-xl">
             {/* Conditional Rendering of Pages */}
             {activePage === "home" && (
-              <Game />
+              iframeContent
               // <>
               //   <div className="px-4 z-10">
               //     <div className="flex items-center space-x-2 pt-4 upper-part">
@@ -561,9 +570,8 @@ const App: React.FC = () => {
           <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%)] max-w-xl bg-[#000000] flex justify-around items-center z-50 rounded-t-3xl text-xs">
             {/* Nav Items */}
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${
-                activePage === "home" ? "!bg-[#FF046B] text-[#fff]" : ""
-              } w-1/5 m-1 p-2 rounded-2xl`}
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "home" ? "!bg-[#FF046B] text-[#fff]" : ""
+                } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("home")}
             >
               <img
@@ -574,27 +582,24 @@ const App: React.FC = () => {
               <p className="mt-1">Home</p>
             </div>
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${
-                activePage === "friends" ? "!bg-[#FF046B] text-[#fff]" : ""
-              } w-1/5 m-1 p-2 rounded-2xl`}
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "friends" ? "!bg-[#FF046B] text-[#fff]" : ""
+                } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("friends")}
             >
               <Friends className="w-8 h-8 mx-auto " />
               <p className="mt-1">Friends</p>
             </div>
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${
-                activePage === "earn" ? "!bg-[#FF046B] text-[#fff]" : ""
-              } w-1/5 m-1 p-2 rounded-2xl`}
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "earn" ? "!bg-[#FF046B] text-[#fff]" : ""
+                } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("earn")}
             >
               <Coins className="w-8 h-8 mx-auto" />
               <p className="mt-1">Earn</p>
             </div>
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${
-                activePage === "airdrop" ? "!bg-[#FF046B] text-[#fff]" : ""
-              } w-1/5 m-1 p-2 rounded-2xl`}
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "airdrop" ? "!bg-[#FF046B] text-[#fff]" : ""
+                } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("airdrop")}
             >
               <img src={main} alt="Airdrop" className="w-8 h-8 mx-auto" />
