@@ -30,17 +30,6 @@ if (typeof window !== 'undefined' && typeof window.Buffer === 'undefined') {
 declare const Telegram: any;
 
 const App: React.FC = () => {
-
-  const iframeContent = useMemo(() => (
-    <iframe
-      src="/game.html"
-      title="Squid Game"
-      className="bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"
-      style={{ width: '100%', height: '100%', border: 'none', marginTop: -60 }}
-    />
-  ), []);
-
-
   const levelNames = [
     "Bronze",
     "Silver",
@@ -424,8 +413,15 @@ const App: React.FC = () => {
 
           <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col max-w-xl">
             {/* Conditional Rendering of Pages */}
+            <iframe
+              src="/game.html"
+              title="Squid Game"
+              className="bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"
+              style={{ width: '100%', height: activePage === "home" ? "100%": 0, border: 'none', marginTop: -60, opacity: activePage === "home" ? 100 : 0 }}
+            />
+
             {activePage === "home" && (
-              iframeContent
+              <></>
               // <>
               //   <div className="px-4 z-10">
               //     <div className="flex items-center space-x-2 pt-4 upper-part">
