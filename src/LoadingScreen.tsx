@@ -3,7 +3,7 @@ import { main } from "./images";
 
 const LoadingScreen: React.FC = () => {
   return (
-    <div className="w-full bg-gradient-to-b  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3] text-white h-screen font-bold flex flex-col justify-center items-center">
+    <div className="w-full bg-gradient-to-br  from-[#0F6E5B] via-[#0DB3B5] to-[#F6E5D3] text-white h-screen font-bold flex flex-col justify-center items-center">
       {/* Loading Image */}
       <img
         src={main}
