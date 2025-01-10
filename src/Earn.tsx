@@ -281,7 +281,7 @@ const Earn: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-[#05080D] to-[#1c1c1c] text-white h-screen font-bold flex flex-col max-w-xl">
+    <div className="w-full bg-gradient-to-b from-[#05080D] to-[#1c1c1c] text-white h-screen font-bold flex flex-col max-w-sm">
       {/* Header with Coin Image */}
       <div className="flex flex-col items-center justify-center mt-6">
         <img src={main} alt="Dollar Coin" className="w-20 h-20 mb-2" />

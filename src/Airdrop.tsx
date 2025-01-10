@@ -96,7 +96,7 @@ const Airdrop: React.FC = () => {
 
   return (
     <div className="bg-[#000000] flex justify-center h-screen">
-      <div className="w-full bg-gradient-to-b from-[#000000] to-[#1c1c1c] text-white h-screen font-bold flex flex-col max-w-xl shadow-lg shadow-[#EA2E33]/50">
+      <div className="w-full bg-gradient-to-b from-[#000000] to-[#1c1c1c] text-white h-screen font-bold flex flex-col max-w-sm shadow-lg shadow-[#EA2E33]/50">
         {/* Coin Image */}
         <div className="flex justify-center items-center mt-8">
           <img src={main} alt="Dollar Coin" className="w-32 h-32" />

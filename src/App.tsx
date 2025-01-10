@@ -416,7 +416,7 @@ const App: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-br  from-[#0F6E5B] via-[#0DB3B5] to-[#F6E5D3]"></div>
           {/* <div className="absolute inset-0 bg-gradient-to-tl from-[#e54b81] via-[#e262b5] to-[#e54b81] opacity-30"></div> */}
 
-          <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col max-w-xl">
+          <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col max-w-sm">
             {/* Conditional Rendering of Pages */}
             <div className="relative w-full h-full  flex flex-col items-center">
               {/* {loadingIframe &&
@@ -427,8 +427,8 @@ const App: React.FC = () => {
                 src="/game.html"
                 title="Squid Game"
                 // onLoad={handleIframeLoad}
-                className="bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"
-                style={{ width: 400, height: activePage === "home" ? "100%" : 0, border: 'none', marginTop: -60, opacity: activePage === "home" ? 100 : 0 }}
+                className="bg-black md:mt-[-46px]"
+                style={{ width: 380, height: activePage === "home" ? "100%" : 0, border: 'none',  opacity: activePage === "home" ? 100 : 0 }}
               />
             </div>
 
@@ -575,7 +575,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Bottom Navigation */}
-          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%)] max-w-xl bg-[#000000] flex justify-around items-center z-50 rounded-t-3xl text-xs">
+          <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%)] max-w-sm bg-[#000000] flex justify-around items-center z-50 rounded-t-3xl text-xs">
             {/* Nav Items */}
             <div
               className={`nav-item text-center text-[#E4DFDC] ${activePage === "home" ? "!bg-[#249f9c] text-[#fff]" : ""

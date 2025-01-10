@@ -116,7 +116,7 @@ const FriendsPage: React.FC = () => {
 
   return (
     <div className="bg-black flex justify-center h-screen md:rounded-ss-lg md:rounded-se-lg">
-      <div className="w-full bg-gradient-to-b from-black to-[#1c1c1c] text-white font-bold flex flex-col max-w-xl shadow-lg shadow-[#EA2E33]/50">
+      <div className="w-full bg-gradient-to-b from-black to-[#1c1c1c] text-white font-bold flex flex-col max-w-sm shadow-lg shadow-[#EA2E33]/50">
         {/* Invite Friends Section */}
         <div className="px-4 flex-shrink-0">
           <div className="text-center mt-6">
