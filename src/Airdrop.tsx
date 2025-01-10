@@ -145,7 +145,7 @@ const Airdrop: React.FC = () => {
             className="font-lemon font-normal"
             style={{
               padding: "20px 50px",
-              backgroundColor: "#FF046B",
+              backgroundColor: "#249f9c",
               color: "white",
               borderRadius: "14px",
 
