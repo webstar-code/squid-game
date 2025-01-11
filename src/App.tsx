@@ -413,7 +413,7 @@ const App: React.FC = () => {
       ) : (
         <>
           {/* Background Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-br  from-[#0F6E5B] via-[#0DB3B5] to-[#F6E5D3]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br  from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3]"></div>
           {/* <div className="absolute inset-0 bg-gradient-to-tl from-[#e54b81] via-[#e262b5] to-[#e54b81] opacity-30"></div> */}
 
           <div className="relative pt-2 md:pt-14 w-full text-white h-screen font-bold flex flex-col max-w-sm">
@@ -437,7 +437,7 @@ const App: React.FC = () => {
               // <>
               //   <div className="px-4 z-10">
               //     <div className="flex items-center space-x-2 pt-4 upper-part">
-              //       <div className="p-1 rounded-lg bg-[#249f9c]">
+              //       <div className="p-1 rounded-lg bg-[#FF3D7C]">
               //         <Hamster size={24} className="text-white" />
               //       </div>
               //       <div>
@@ -459,10 +459,10 @@ const App: React.FC = () => {
               //               </span>
               //             </p>
               //           </div>
-              //           <div className="flex items-center mt-1 border-2 border-[#249f9c] rounded-full">
+              //           <div className="flex items-center mt-1 border-2 border-[#FF3D7C] rounded-full">
               //             <div className="w-full h-2 bg-black/70 rounded-full">
               //               <div
-              //                 className="bg-gradient-to-r from-[#249f9c] to-[#E4DFDC] h-2 rounded-full"
+              //                 className="bg-gradient-to-r from-[#FF3D7C] to-[#E4DFDC] h-2 rounded-full"
               //                 style={{ width: `${calculateProgress()}%` }}
               //               ></div>
               //             </div>
@@ -472,7 +472,7 @@ const App: React.FC = () => {
               //     </div>
               //   </div>
 
-              //   <div className="flex-grow h-screen mt-1 bg-[#249f9c] rounded-t-[32px] relative  z-0">
+              //   <div className="flex-grow h-screen mt-1 bg-[#FF3D7C] rounded-t-[32px] relative  z-0">
               //     <div className="absolute flex flex-col h-auto top-[2px] left-0 right-0 bottom-0 bg-gradient-to-b from-[#FF3D7C] via-[#FF819E] to-[#F6E5D3] rounded-t-[30px]">
               //       <div className="px-4 mt-2 flex justify-between gap-2">
               //         {/* Daily Reward */}
@@ -578,7 +578,7 @@ const App: React.FC = () => {
           <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%)] max-w-sm bg-[#000000] flex justify-around items-center z-50 rounded-t-3xl text-xs">
             {/* Nav Items */}
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${activePage === "home" ? "!bg-[#249f9c] text-[#fff]" : ""
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "home" ? "!bg-[#FF3D7C] text-[#fff]" : ""
                 } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("home")}
             >
@@ -590,7 +590,7 @@ const App: React.FC = () => {
               <p className="mt-1">Home</p>
             </div>
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${activePage === "friends" ? "!bg-[#249f9c] text-[#fff]" : ""
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "friends" ? "!bg-[#FF3D7C] text-[#fff]" : ""
                 } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("friends")}
             >
@@ -598,7 +598,7 @@ const App: React.FC = () => {
               <p className="mt-1">Friends</p>
             </div>
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${activePage === "earn" ? "!bg-[#249f9c] text-[#fff]" : ""
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "earn" ? "!bg-[#FF3D7C] text-[#fff]" : ""
                 } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("earn")}
             >
@@ -606,7 +606,7 @@ const App: React.FC = () => {
               <p className="mt-1">Earn</p>
             </div>
             <div
-              className={`nav-item text-center text-[#E4DFDC] ${activePage === "airdrop" ? "!bg-[#249f9c] text-[#fff]" : ""
+              className={`nav-item text-center text-[#E4DFDC] ${activePage === "airdrop" ? "!bg-[#FF3D7C] text-[#fff]" : ""
                 } w-1/5 m-1 p-2 rounded-2xl`}
               onClick={() => handleNavigation("airdrop")}
             >

@@ -43,7 +43,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
       <img src={icon} alt={title} className="w-10 h-10 mr-4" />
       <div className="text-white">
         <div className="">{title}</div>
-        <div className="text-[#249f9c]">+{reward}</div>
+        <div className="text-[#FF3D7C]">+{reward}</div>
       </div>
     </div>
     <div className="text-gray-400">
@@ -285,7 +285,7 @@ const Earn: React.FC = () => {
       {/* Header with Coin Image */}
       <div className="flex flex-col items-center justify-center mt-6">
         <img src={main} alt="Dollar Coin" className="w-20 h-20 mb-2" />
-        <h1 className="text-xl font-lemon text-[#249f9c]">Earn more coins</h1>
+        <h1 className="text-xl font-lemon text-[#FF3D7C]">Earn more coins</h1>
       </div>
 
       {/* Main Content */}

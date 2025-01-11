@@ -120,7 +120,7 @@ const FriendsPage: React.FC = () => {
         {/* Invite Friends Section */}
         <div className="px-4 flex-shrink-0">
           <div className="text-center mt-6">
-            <h2 className="text-3xl  font-lemon text-[#249f9c] drop-shadow-lg">
+            <h2 className="text-3xl  font-lemon text-[#FF3D7C] drop-shadow-lg">
               Invite friends!
             </h2>
             <p className="text-gray-400 text-sm">You will receive bonuses</p>
@@ -133,7 +133,7 @@ const FriendsPage: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm font-bold">Invite a friend</p>
-                <p className="text-xs text-[#249f9c]">+2,000 for you</p>
+                <p className="text-xs text-[#FF3D7C]">+2,000 for you</p>
               </div>
             </div>
 
@@ -152,7 +152,7 @@ const FriendsPage: React.FC = () => {
                 <p className="text-sm font-bold">
                   Invite a friend with Telegram Premium
                 </p>
-                <p className="text-xs text-[#249f9c]">+5,000 for you</p>
+                <p className="text-xs text-[#FF3D7C]">+5,000 for you</p>
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@ const FriendsPage: React.FC = () => {
         >
           <button
             onClick={handleInvite}
-            className="bg-[#249f9c] text-white rounded-full py-3 px-8 flex-1 mr-2"
+            className="bg-[#FF3D7C] text-white rounded-full py-3 px-8 flex-1 mr-2"
             style={{
               fontSize: "1.2rem",
               fontWeight: "bold",
@@ -196,7 +196,7 @@ const FriendsPage: React.FC = () => {
           </button>
           <button
             onClick={setupInvitationLinkCopy}
-            className="bg-[#249f9c] text-white rounded-full py-4 px-6 flex-4 ml-2"
+            className="bg-[#FF3D7C] text-white rounded-full py-4 px-6 flex-4 ml-2"
             style={{
               fontSize: "1.1rem",
               fontWeight: "bold",

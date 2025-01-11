@@ -114,7 +114,7 @@ const Airdrop: React.FC = () => {
 
         {/* Wallet Button */}
         <div className="flex justify-center font-lemon font-normal items-center pt-4">
-            <TonConnectButton />
+            <TonConnectButton className="tonconnectbtn"  />
 
         </div>
 
@@ -145,7 +145,7 @@ const Airdrop: React.FC = () => {
             className="font-lemon font-normal"
             style={{
               padding: "20px 50px",
-              backgroundColor: "#249f9c",
+              backgroundColor: "#FF3D7C",
               color: "white",
               borderRadius: "14px",
 
@@ -169,7 +169,7 @@ const Airdrop: React.FC = () => {
 
         {/* Footer */}
         <div className="flex justify-center items-center mt-auto mb-6">
-          <p className="text-center text-[#51C4C8]">
+          <p className="text-center text-[#FF3D7C]">
             More opportunities will be available soon
           </p>
         </div>
